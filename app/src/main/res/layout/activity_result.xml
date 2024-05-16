@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.khandev.qrcodescanner.presentation.activity.ResultActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/result"
+        app:titleCentered="true" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/browser_new" />
+
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="25dp"
+        android:paddingStart="20dp"
+        android:text="@string/website" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/category"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp" />
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="30dp"
+        android:maxLines="5"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="https://chat.openai.com/"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/share"
+        android:layout_width="@dimen/button_widhth"
+        android:layout_height="@dimen/button_height"
+        android:layout_above="@id/btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="15dp"
+        android:background="@drawable/ui_btn_bg"
+        android:padding="10dp"
+        android:text="Share"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="@dimen/button_widhth"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ui_btn_bg"
+        android:padding="10dp"
+
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
